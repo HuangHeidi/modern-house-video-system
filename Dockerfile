@@ -5,6 +5,7 @@ WORKDIR /app/frontend
 
 COPY video-management-system/package*.json ./
 COPY video-management-system/vite.config.js ./
+COPY video-management-system/ ./
 RUN npm install
 COPY video-management-system/ ./
 RUN npm run build
