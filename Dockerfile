@@ -4,6 +4,7 @@ FROM node:20-alpine AS frontend-builder
 WORKDIR /app/frontend
 
 COPY video-management-system/package*.json ./
+COPY video-management-system/vite.config.mjs ./
 RUN npm install
 COPY video-management-system/ ./
 RUN npm run build
